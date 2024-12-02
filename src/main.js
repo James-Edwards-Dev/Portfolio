@@ -48,6 +48,13 @@ const gridHelper = new THREE.GridHelper(200, 50);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(window.innerWidth, window.innerHeight)
+});
+
 function main_loop() {
     requestAnimationFrame(main_loop)
 
