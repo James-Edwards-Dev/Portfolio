@@ -4,6 +4,8 @@ import * as THREE from 'three'
 
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 
+import { GLTFLoader } from 'three/examples/jsm/Addons.js';
+
 // Set up scene
 const scene = new THREE.Scene();
 
@@ -25,9 +27,12 @@ const material = new THREE.MeshStandardMaterial({
     color: 0xffa500,
 });
 
-const torus = new THREE.Mesh(geometry, material)
-
-scene.add(torus)
+const gltfLoader = new GLTFLoader().setPath('./assets/Models');
+    gltfLoader.load('/HollowBody/hollow_body.gltf', (gltf) => {
+        const mesh = gltf.scene;
+        scene.add(mesh);
+        mesh.position(0, 0, 0);
+    });
 
 // Lighting
 const pointLight = new THREE.PointLight(0xffffff, 20, 10000, 1.5)
@@ -47,10 +52,6 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 function main_loop() {
     requestAnimationFrame(main_loop)
-
-    torus.rotation.x += 0.01;
-    torus.rotation.y += 0.005;
-    torus.rotation.z += 0.01;
 
     controls.update();
     // draw scene
