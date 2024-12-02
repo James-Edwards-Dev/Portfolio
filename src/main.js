@@ -27,13 +27,6 @@ const material = new THREE.MeshStandardMaterial({
     color: 0xffa500,
 });
 
-const gltfLoader = new GLTFLoader().setPath('./assets/Models');
-    gltfLoader.load('/HollowBody/hollow_body.gltf', (gltf) => {
-        const mesh = gltf.scene;
-        scene.add(mesh);
-        mesh.position(0, 0, 0);
-    });
-
 // Lighting
 const pointLight = new THREE.PointLight(0xffffff, 20, 10000, 1.5)
 pointLight.position.set(2,2,2)
@@ -57,7 +50,15 @@ function main_loop() {
     // draw scene
     renderer.render(scene, camera);
 }
-
+load_gltf('hollowBody/hollow_body.gltf');
+function load_gltf(path){
+    const gltfLoader = new GLTFLoader().setPath('./assets/models/');
+    gltfLoader.load(path, (gltf) => {
+        const mesh = gltf.scene;
+        scene.add(mesh);
+        mesh.position(0, 0, 0);
+    });
+}
 function add_star() {
     const geometry = new THREE.SphereGeometry(0.25, 24, 24);
     const material = new THREE.MeshStandardMaterial({color: 0xffffff,})
