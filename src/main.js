@@ -22,10 +22,15 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight)
 
 // Geometry
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100)
-const material = new THREE.MeshStandardMaterial({
-    color: 0xffa500,
-});
+let guitar = null;
+load_gltf('hollowBody/hollow_body.gltf')
+    .then((mesh) => {
+        guitar = mesh;
+        guitar.scale.set(3, 3, 3);
+    })
+    .catch((error) =>{
+        console.error('Error Loading Model', error);
+    });
 
 // Lighting
 const pointLight = new THREE.PointLight(0xffffff, 20, 10000, 1.5)
@@ -46,17 +51,22 @@ const controls = new OrbitControls(camera, renderer.domElement);
 function main_loop() {
     requestAnimationFrame(main_loop)
 
+    guitar.rotation.x += 0.01;
     controls.update();
     // draw scene
     renderer.render(scene, camera);
 }
-load_gltf('hollowBody/hollow_body.gltf');
+
 function load_gltf(path){
-    const gltfLoader = new GLTFLoader().setPath('./assets/models/');
-    gltfLoader.load(path, (gltf) => {
-        const mesh = gltf.scene;
-        scene.add(mesh);
-        mesh.position(0, 0, 0);
+    return new Promise((resolve, reject) => {
+        const gltfLoader = new GLTFLoader().setPath('./assets/models/');
+        gltfLoader.load(path, (gltf) => {
+            const mesh = gltf.scene;
+            scene.add(mesh);
+            resolve(mesh);
+        }, undefined, (error) => {
+            reject(error);
+        });
     });
 }
 function add_star() {
