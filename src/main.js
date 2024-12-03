@@ -22,6 +22,12 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight)
 
 
+// Skybox
+const textureLoader = new THREE.TextureLoader();
+textureLoader.load('./assets/images/skybox.png', (texture) => {
+    scene.background = texture
+});
+
 // Geometry
 let me = null;
 const material = new THREE.MeshStandardMaterial({color: 0xffa500});
