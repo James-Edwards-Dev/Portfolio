@@ -1,8 +1,22 @@
 canvas {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 
     width: 100vw;
+    height: 100vh;
+}
+body{
+    margin: 0;
+}
+main{
+    color: white;
+    position: absolute;
+    z-index: 1;
+}
+
+#hero{
+    background-color: red;
+    width: 50vw;
     height: 100vh;
 }

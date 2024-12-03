@@ -21,6 +21,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight)
 
+
 // Geometry
 let guitar = null;
 load_gltf('hollowBody/hollow_body.gltf')
@@ -31,6 +32,7 @@ load_gltf('hollowBody/hollow_body.gltf')
     .catch((error) =>{
         console.error('Error Loading Model', error);
     });
+
 
 // Lighting
 const pointLight = new THREE.PointLight(0xffffff, 20, 10000, 1.5)
@@ -44,9 +46,9 @@ scene.add(pointLight, ambientLight)
 // Helpers
 const lightHelper = new THREE.PointLightHelper(pointLight);
 const gridHelper = new THREE.GridHelper(200, 50);
-//scene.add(lightHelper, gridHelper)
+scene.add(lightHelper, gridHelper)
 
-const controls = new OrbitControls(camera, renderer.domElement);
+//const controls = new OrbitControls(camera, renderer.domElement);
 
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -58,8 +60,7 @@ window.addEventListener('resize', () => {
 function main_loop() {
     requestAnimationFrame(main_loop)
 
-    guitar.rotation.x += 0.01;
-    controls.update();
+    //controls.update();
     // draw scene
     renderer.render(scene, camera);
 }
