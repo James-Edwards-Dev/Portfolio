@@ -23,13 +23,13 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 
 
 // Geometry
-let guitar = null;
+let me = null;
 load_gltf('hollowBody/hollow_body.gltf')
     .then((mesh) => {
-        guitar = mesh;
-        guitar.scale.set(3, 3, 3);
+        me = mesh;
+        me.scale.set(3, 3, 3);
 
-        update_guitar_pos();
+        update_me_pos();
     })
     .catch((error) =>{
         console.error('Error Loading Model', error);
@@ -55,10 +55,10 @@ window.addEventListener('resize', () => {
 
     renderer.setSize(window.innerWidth, window.innerHeight)
 
-    update_guitar_pos();
+    update_me_pos();
 });
 
-function update_guitar_pos() {
+function update_me_pos() {
     const vector = new THREE.Vector3(0.5, 0, 0);
     vector.unproject(camera);
 
@@ -66,9 +66,9 @@ function update_guitar_pos() {
     const distance = camera.position.z; // Calculate distance along Z-axis
     const worldPosition = camera.position.clone().add(direction.multiplyScalar(distance));
 
-    guitar.position.copy(worldPosition);
+    me.position.copy(worldPosition);
 
-    guitar.lookAt(camera.position);
+    me.lookAt(camera.position);
 }
 
 function main_loop() {
