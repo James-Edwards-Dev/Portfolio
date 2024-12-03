@@ -24,10 +24,11 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 
 // Geometry
 let me = null;
-load_gltf('hollowBody/hollow_body.gltf')
+const material = new THREE.MeshStandardMaterial({color: 0xffa500});
+load_gltf_new_material('me/me.gltf', material)
     .then((mesh) => {
         me = mesh;
-        me.scale.set(3, 3, 3);
+        me.scale.set(8, 8, 8);
 
         update_me_pos();
     })
@@ -41,13 +42,13 @@ load_gltf('hollowBody/hollow_body.gltf')
 const ambientLight = new THREE.AmbientLight(0xffffff, 2);
 
 // Add Lights
-scene.add(ambientLight) 
+scene.add(ambientLight);
 
 // Helpers
 const gridHelper = new THREE.GridHelper(200, 50);
 //scene.add(gridHelper)
 
-const controls = new OrbitControls(camera, renderer.domElement);
+//const controls = new OrbitControls(camera, renderer.domElement);
 
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -55,7 +56,7 @@ window.addEventListener('resize', () => {
 
     renderer.setSize(window.innerWidth, window.innerHeight)
 
-    update_me_pos();
+    //update_me_pos();
 });
 
 function update_me_pos() {
@@ -68,15 +69,14 @@ function update_me_pos() {
 
     me.position.copy(worldPosition);
 
-    me.lookAt(camera.position);
+    me.position.y -= 20;
 }
 
 function main_loop() {
     requestAnimationFrame(main_loop)
 
-    //guitar.rotation.z += 0.01;
-
-    controls.update();
+    me.rotation.y += 0.01;
+    update_me_pos();
     // draw scene
     renderer.render(scene, camera);
 }
@@ -91,6 +91,34 @@ function load_gltf(path){
         }, undefined, (error) => {
             reject(error);
         });
+    });
+}
+
+function load_gltf_new_material(path, newMaterial) {
+    return new Promise((resolve, reject) => {
+        const gltfLoader = new GLTFLoader().setPath('./assets/models/');
+        gltfLoader.load(
+            path,
+            (gltf) => {
+                const mesh = gltf.scene;
+
+                // Traverse the scene to apply the material to all meshes
+                mesh.traverse((child) => {
+                    if (child.isMesh) {
+                        child.material = newMaterial;
+                        child.material.needsUpdate = true;
+                    }
+                });
+
+                // Add the loaded mesh to the scene
+                scene.add(mesh);
+                resolve(mesh);
+            },
+            undefined,
+            (error) => {
+                reject(error);
+            }
+        );
     });
 }
 
