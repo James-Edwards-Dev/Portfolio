@@ -23,10 +23,13 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 
 
 // Skybox
-const textureLoader = new THREE.TextureLoader();
+/* const textureLoader = new THREE.TextureLoader();
 textureLoader.load('./assets/images/skybox.png', (texture) => {
     scene.background = texture
 });
+ */
+const background_color = new THREE.Color(0x87CEEB);
+scene.background = background_color;
 
 // Geometry
 let me = null;
@@ -82,7 +85,7 @@ function update_me_pos() {
 function main_loop() {
     requestAnimationFrame(main_loop)
 
-    me.rotation.y += 0.01;
+    me.rotation.y -= 0.005;
     update_me_pos();
     // draw scene
     renderer.render(scene, camera);
