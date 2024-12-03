@@ -95,7 +95,7 @@ function main_loop() {
 
 function load_gltf(path){
     return new Promise((resolve, reject) => {
-        const gltfLoader = new GLTFLoader().setPath('./public/models/');
+        const gltfLoader = new GLTFLoader().setPath('./models/');
         gltfLoader.load(path, (gltf) => {
             const mesh = gltf.scene;
             scene.add(mesh);
@@ -108,7 +108,7 @@ function load_gltf(path){
 
 function load_gltf_new_material(path, newMaterial) {
     return new Promise((resolve, reject) => {
-        const gltfLoader = new GLTFLoader().setPath('./public/models/');
+        const gltfLoader = new GLTFLoader().setPath('./models/');
         gltfLoader.load(
             path,
             (gltf) => {
