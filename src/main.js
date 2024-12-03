@@ -85,8 +85,10 @@ function update_me_pos() {
 function main_loop() {
     requestAnimationFrame(main_loop)
 
-    me.rotation.y -= 0.005;
-    update_me_pos();
+    if (me){
+        me.rotation.y -= 0.005;
+        update_me_pos();
+    }
     // draw scene
     renderer.render(scene, camera);
 }

@@ -10,8 +10,12 @@ body{
 }
 main{
     /* display: none; */
-    color: white;
     position: absolute;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
 }
 
 #hero{
@@ -23,10 +27,39 @@ main{
     align-items: center;
 
     > div {
-        background-color: brown;
+        background-color: white;
         width: 90%;
         height: 90%;
     }
+}
+
+.contact_list{
+    width: calc(100% - 40px);
+    padding: 20px 20px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    a {
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        border-radius: 15px;
+        background-color: gray;
+        text-decoration: none;
+        color: black;
+
+        transition: scale ease-in 100ms;
+    }
+}
+.contact_list a:hover{
+    scale: 1.1;
+    background-color: rebeccapurple;
 }
 
 #tempSection {
