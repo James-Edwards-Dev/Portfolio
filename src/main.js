@@ -28,39 +28,55 @@ load_gltf('hollowBody/hollow_body.gltf')
     .then((mesh) => {
         guitar = mesh;
         guitar.scale.set(3, 3, 3);
+
+        update_guitar_pos();
     })
     .catch((error) =>{
         console.error('Error Loading Model', error);
     });
 
 
-// Lighting
-const pointLight = new THREE.PointLight(0xffffff, 20, 10000, 1.5)
-pointLight.position.set(2,2,2)
 
+// Lighting
 const ambientLight = new THREE.AmbientLight(0xffffff, 2);
 
 // Add Lights
-scene.add(pointLight, ambientLight) 
+scene.add(ambientLight) 
 
 // Helpers
-const lightHelper = new THREE.PointLightHelper(pointLight);
 const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(lightHelper, gridHelper)
+//scene.add(gridHelper)
 
-//const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 
     renderer.setSize(window.innerWidth, window.innerHeight)
+
+    update_guitar_pos();
 });
+
+function update_guitar_pos() {
+    const vector = new THREE.Vector3(0.5, 0, 0);
+    vector.unproject(camera);
+
+    const direction = vector.sub(camera.position).normalize();
+    const distance = camera.position.z; // Calculate distance along Z-axis
+    const worldPosition = camera.position.clone().add(direction.multiplyScalar(distance));
+
+    guitar.position.copy(worldPosition);
+
+    guitar.lookAt(camera.position);
+}
 
 function main_loop() {
     requestAnimationFrame(main_loop)
 
-    //controls.update();
+    //guitar.rotation.z += 0.01;
+
+    controls.update();
     // draw scene
     renderer.render(scene, camera);
 }

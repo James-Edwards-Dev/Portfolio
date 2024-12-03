@@ -9,6 +9,7 @@ body{
     overflow-x: hidden;
 }
 main{
+    /* display: none; */
     color: white;
     position: absolute;
 }
