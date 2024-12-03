@@ -3,6 +3,11 @@ canvas {
     top: 0;
     left: 0;
 }
+:root{
+    --primary-color: #ffffff;
+    --lightprimary-color: #d1d1d1;
+    --highlight-color: #87CEEB;
+}
 
 body{
     margin: 0;
@@ -27,7 +32,7 @@ main{
     align-items: center;
 
     > div {
-        background-color: white;
+        background-color: var(--primary-color);
         width: 90%;
         height: 90%;
     }
@@ -50,7 +55,7 @@ main{
         padding: 10px;
         gap: 10px;
         border-radius: 15px;
-        background-color: gray;
+        background-color: var(--lightprimary-color);
         text-decoration: none;
         color: black;
 
@@ -59,7 +64,7 @@ main{
 }
 .contact_list a:hover{
     scale: 1.1;
-    background-color: rebeccapurple;
+    background-color: var(--highlight-color);
 }
 
 #tempSection {
