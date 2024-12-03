@@ -40,9 +40,10 @@ load_gltf_new_material('me/me.gltf', material)
 
 // Lighting
 const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 5);
 
 // Add Lights
-scene.add(ambientLight);
+scene.add(ambientLight, directionalLight);
 
 // Helpers
 const gridHelper = new THREE.GridHelper(200, 50);
