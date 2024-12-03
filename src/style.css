@@ -1,5 +1,5 @@
 canvas {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 }
@@ -22,7 +22,7 @@ main{
     justify-content: center;
     align-items: center;
 
-    div {
+    > div {
         background-color: brown;
         width: 90%;
         height: 90%;
