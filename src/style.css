@@ -129,8 +129,22 @@ main{
     background-color: var(--highlight-color);
 }
 
-#tempSection {
+.projects_skills{
     width: 100vw;
+
+    display: flex;
+
+    article {
+        flex-grow: 1.5;
+    }
+
+    aside {
+        flex-grow: 1;
+        max-width: 650px;
+    }
+}
+
+.tempSection {
     height: 100vh;
     background-color: rgb(0, 4, 255);
 }
