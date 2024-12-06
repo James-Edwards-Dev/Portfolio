@@ -141,7 +141,7 @@ main{
 
     aside {
         flex-grow: 1;
-        max-width: 450px;
+        max-width: 400px;
         padding: 15px;
         background-color: gray;
 
@@ -159,9 +159,14 @@ main{
         list-style: none;
         min-width: max-content;
 
+        flex-grow: 1;
+        background-color: white;
+        padding: 5px;
+        padding-right: 10px;
         display: flex;
         gap: 10px;
         align-items: center;
+        justify-content: center;
     }
 }
 .tempSection {
