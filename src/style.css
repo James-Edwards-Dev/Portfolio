@@ -135,8 +135,8 @@ main{
 
 .projects_skills{
     width: 90vw;
-    padding: 0 5vw;
-
+    padding: 2rem 5vw;
+    gap: 2rem;
     display: flex;
 
     article {
@@ -148,7 +148,24 @@ main{
         max-width: 400px;
         padding: 15px;
         background-color: gray;
+        height: max-content;
     }
+}
+
+.projects {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    div{
+        background-color: var(--darkerprimary-color);
+        border-radius: 15px;
+        flex-basis: 250px;
+        height: 500px;
+        flex-grow: 1;
+        border: 5px solid black;
+    }
+
 }
 
 .skills{
