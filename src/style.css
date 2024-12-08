@@ -163,7 +163,7 @@ section{
 
     aside {
         flex-grow: 1;
-        max-width: 400px;
+        max-width: 350px;
         padding: 15px;
         background-color: gray;
         height: max-content;
@@ -288,4 +288,15 @@ section{
         padding: 20px;
         padding-bottom: 40px;
     }
+}
+
+
+form label, form input, form textarea{
+    display: block;
+    width: 100%;
+}
+
+form textarea {
+    resize: vertical;
+    margin-bottom: 1rem;
 }
