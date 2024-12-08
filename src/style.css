@@ -184,6 +184,7 @@ section{
     border: 5px solid black;
 
     > a > img {
+        object-fit: cover;
         width: 100%;
         height: 300px;
     }
