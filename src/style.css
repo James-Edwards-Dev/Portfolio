@@ -160,16 +160,57 @@ main{
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+}
 
-    div{
-        background-color: var(--darkerprimary-color);
-        border-radius: 15px;
-        flex-basis: 250px;
-        height: 500px;
-        flex-grow: 1;
-        border: 5px solid black;
+.projects > div {
+    padding: 1.5rem;
+    background-color: var(--darkerprimary-color);
+    border-radius: 15px;
+    flex-basis: 250px;
+    height: fit-content;
+    flex-grow: 1;
+    border: 5px solid black;
+
+    > a > img {
+        width: 100%;
+        height: 300px;
     }
 
+    .links{
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+
+        img {
+            height: 50px;
+        }
+
+        >:hover{
+            scale: 1.15;
+        }
+        > * {
+            transition: scale ease-in 100ms;
+        }
+
+        .button{
+            background-color: var(--primary-color);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            padding: 0 15px;
+            border: solid 5px black;
+        }
+    }
+}
+
+.button {
+    text-decoration: none;
+    color: black;
+}
+.button:hover{
+    scale: 1.05 !important;
+    background-color: var(--highlight-color) !important;
 }
 
 .skills{
