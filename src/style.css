@@ -38,16 +38,18 @@ main{
 }
 
 #hero{
-    width: 60vw;
+    border-bottom: 5px black solid;
+    width: 100vw;
     height: 100svh;
 
     display: flex;
-    justify-content: center;
     align-items: center;
 
     > div {
         background-color: var(--primary-color);
-        width: 85%;
+        width: 50%;
+        max-width: 70%;
+        margin: 0 5vw;
         max-height: 90%;
         height: fit-content;
         border-radius: 15px;
