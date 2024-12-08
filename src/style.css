@@ -236,6 +236,45 @@ section{
         justify-content: center;
     }
 }
+
+.education {
+    padding: 2rem;
+    background-color: var(--darkerprimary-color);
+}
+.main-education {
+    display: flex;
+    gap: 2rem;
+
+    > a img {
+        border: solid black 5px;
+        background-color: white;
+        padding: 10px;
+    }
+    > div{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        img {
+            height: 7rem;
+        }
+    }
+    .images{
+        display: flex;
+        > img {
+            margin-left: auto;
+        }
+    }
+}
+.education .feedback{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    p {
+        background-color: green;
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+}
 .tempSection {
     height: 100vh;
     background-color: rgb(0, 4, 255);
