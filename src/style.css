@@ -182,8 +182,11 @@ section{
     background-color: var(--darkerprimary-color);
     border-radius: 15px;
     border: 5px solid black;
-
-    > a > img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    > div > a > img {
         object-fit: cover;
         width: 100%;
         height: 300px;
