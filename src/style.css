@@ -97,7 +97,7 @@ main{
     background-color: var(--highlight-color);
 }
 
-.hero_projects{
+/*.hero_projects{
     border-top: 5px solid black;
     border-bottom: 5px solid black;
     background-color: var(--darkprimary-color);
@@ -127,7 +127,7 @@ main{
 .hero_projects a:hover{
     scale: 1.05;
     background-color: var(--highlight-color);
-}
+}*/
 
 .projects_skills{
     width: 90vw;
