@@ -47,10 +47,12 @@ main{
 
     > div {
         background-color: var(--primary-color);
-        width: 90%;
-        height: 90%;
+        width: 85%;
+        max-height: 90%;
+        height: fit-content;
         border-radius: 15px;
         border: 5px solid black;
+        padding-bottom: 2rem;
     }
 
     p, h1, h2{
