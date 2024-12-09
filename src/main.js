@@ -143,6 +143,9 @@ const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
 const messageInput = document.querySelector("#message");
 
+const publicKey = "Mom9JcScPRUDHw_ga"
 
+const surviceID = "service_6xy26rs";
+const templateID = "template_vgkd5z7";
 
 main_loop();
