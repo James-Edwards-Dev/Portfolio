@@ -134,4 +134,15 @@ function load_gltf_new_material(path, newMaterial) {
     });
 }
 
+// Contact form
+
+const contactForm = document.querySelector("#contact-form-form");
+const sumbitBtn = document.querySelector("#submit-contact");
+
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const messageInput = document.querySelector("#message");
+
+
+
 main_loop();
