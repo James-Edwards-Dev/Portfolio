@@ -307,3 +307,17 @@ form textarea {
     resize: vertical;
     margin-bottom: 1rem;
 }
+
+footer .contact{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    gap: 1rem;
+    h3{
+        margin: 0;
+        margin-right: 1rem;
+    }
+    a {
+        color: black;
+    }
+}
