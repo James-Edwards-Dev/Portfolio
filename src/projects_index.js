@@ -28,7 +28,18 @@ function displayProjects(projects){
                 </a>
                 <a href="" class="button"><div>Project Details</div></a>
             </div>
-        `
+        `;
+
+        linksDiv = div.querySelector('.links');
+        if (project.Itch) {
+            const itchLink = document.createElement('a');
+            itchLink.href = project.Itch;
+            itchLink.innerHTML = `<img class="itch" src="/Portfolio/assets/images/Itch Io.png">`
+            
+            const buttonLink = linksDiv.querySelector('.button');
+            linksDiv.insertBefore(itchLink, buttonLink);
+        }
+
         projectsList.appendChild(div);
     });
 }
