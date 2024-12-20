@@ -1,6 +1,6 @@
 async function fetchProjects() {
     try {
-        const response = await fetch('public/projects.json');
+        const response = await fetch('projects.json');
         if (!response.ok) throw new Error('Network response was not ok');
         const projects = await response.json();
 
@@ -18,12 +18,12 @@ function displayProjects(projects){
         const div = document.createElement('div');
 
         const encodedProjectName = encodeURIComponent(project.Name);
-        const projectLink = `project.html?project=${encodedProjectName}`; // Create link with query parameter
+        const projectLink = `pages/project.html?project=${encodedProjectName}`; // Create link with query parameter
 
         div.innerHTML = `
             <div>
                 <h3>${project.Name}</h3>
-                <a href="${projectLink}"><img src="/Portfolio/assets/images/${project.Image}"></a>
+                <a href="${projectLink}"><img src="images/${project.Image}"></a>
                 <p>${project.Description}</p>
             </div>
             <div class="links">
@@ -38,7 +38,7 @@ function displayProjects(projects){
         if (project.Itch) {
             const itchLink = document.createElement('a');
             itchLink.href = project.Itch;
-            itchLink.innerHTML = `<img class="itch" src="/Portfolio/assets/images/Itch Io.png">`
+            itchLink.innerHTML = `<img class="itch" src="images/Itch Io.png">`
             
             const buttonLink = linksDiv.querySelector('.button');
             linksDiv.insertBefore(itchLink, buttonLink);
