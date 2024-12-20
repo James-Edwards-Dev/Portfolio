@@ -19,7 +19,7 @@ function displayProjects(projects){
         div.innerHTML = `
             <div>
                 <h3>${project.Name}</h3>
-                <a href=""><img scr="${project.Image}"></a>
+                <a href=""><img src="/Portfolio/assets/images/${project.Image}"></a>
             </div>
         `
         projectsList.appendChild(div);
