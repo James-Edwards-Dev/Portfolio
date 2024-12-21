@@ -18,7 +18,7 @@ function displayProjects(projects){
         const div = document.createElement('div');
 
         const encodedProjectName = encodeURIComponent(project.Name);
-        const projectLink = `pages/project.html?project=${encodedProjectName}`; // Create link with query parameter
+        const projectLink = `project.html?project=${encodedProjectName}`; // Create link with query parameter
 
         div.innerHTML = `
             <div>
