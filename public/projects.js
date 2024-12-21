@@ -7,8 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
     async function displayProjectDetails() {
         const projectName = getProjectFromUrl();
         if (projectName){
-            const project_info = document.getElementById('project_info');
-            project_info.innerHTML = `The project name is ${projectName}`;
+            const decodedProjectName = decodeURIComponent(projectName);
+            const projects = await fetch('projects.json').then(response => response.json());
+            const project = projects.find(proj => proj.Name === decodedProjectName);
+            if (project){
+                
+                const project_info = document.getElementById('project_info');
+                project_info.innerHTML = `
+                    <h1>${project.Name}</h1>
+                    <p>${project.Description}</p>
+                `;
+            }
         }
     }
 
