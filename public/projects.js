@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h1>${project.Name}</h1>
                     <p>${project.Description}</p>
                 `;
+
+                const project_img = document.getElementById('project_image');
+                project_img.src = "images/"+ project.Image;
             }
         }
     }

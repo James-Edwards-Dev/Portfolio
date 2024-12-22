@@ -305,3 +305,11 @@ footer .contact{
         color: black;
     }
 }
+
+#projct_hero {
+    height: 100vh;
+}
+#project_image{
+    height: 100%;
+    max-width: none;
+}
