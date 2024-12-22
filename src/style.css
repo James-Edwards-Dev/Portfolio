@@ -306,10 +306,14 @@ footer .contact{
     }
 }
 
-#projct_hero {
-    height: 100vh;
-}
-#project_image{
-    height: 100%;
-    max-width: none;
+#project_hero {
+    padding: 2rem 0;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    img {
+        height: 40vh;
+    }
 }
