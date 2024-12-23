@@ -20,6 +20,7 @@ canvas {
 html {
     color: var(--text-color);
     font-family: Helvetica,Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 img{
@@ -134,6 +135,8 @@ section{
     width: 90vw;
     gap: 2rem;
     display: flex;
+    margin-top: 0;
+    padding-top: 2rem;
     article {
         flex-grow: 1.5;
     }
@@ -335,4 +338,9 @@ footer .contact{
     aspect-ratio: 16 / 9;
     max-height: 60vh;
     max-width: 96vw;
+}
+
+header {
+    position: fixed;
+    right: 0px;
 }
