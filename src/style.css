@@ -342,5 +342,28 @@ footer .contact{
 
 header {
     position: fixed;
-    right: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    :first-child {
+        border-radius: 0 0 0 4rem;
+        padding-left: 2rem;
+        border-left: 5px solid var(--main-color);
+    }
+    :last-child {
+        border-radius: 0 0 4rem 0;
+        padding-right: 2rem;
+        border-right: 5px solid var(--main-color);
+    }
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+        background-color: var(--main-color);
+        border-bottom: 5px solid var(--main-color);
+        padding: 1rem 1.5rem;      
+    }
+}
+header a:hover {
+    background-color: var(--primary-color);
+    color: var(--inverse-text-color);
 }
