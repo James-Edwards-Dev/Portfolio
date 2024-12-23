@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return params.get('project');
     }
 
+    async function fetchHtmlAsText(url) {
+        return await (await fetch(url)).text();
+    }
+
     async function displayProjectDetails() {
         const projectName = getProjectFromUrl();
         if (projectName){
@@ -31,6 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const video_container = document.getElementById('video_container');   
                     video_container.prepend(h2);              
+                }
+
+                if (project.Page){
+                    project_details = document.getElementById('project_details');
+                    //project_details.innerHTML = project.Page;
+                    project_details.innerHTML = await fetchHtmlAsText("pages/" + project.Page);
                 }
             }
         }
