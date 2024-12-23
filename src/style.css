@@ -309,11 +309,14 @@ footer .contact{
 #project_hero {
     padding: 2rem 0;
     width: 100vw;
-    justify-content: center;
+    
     display: flex;
     flex-direction: row;
     gap: 4rem;
+
+    justify-content: center;
+    align-items: center;
     img {
-        height: 40vh;
+        height: min(40vh, 40vw);
     }
 }
