@@ -311,6 +311,7 @@ footer .contact{
 
 #project_hero {
     padding: 2rem 0;
+    padding-top: 2rem;
     width: 100vw;
     
     display: flex;
@@ -354,6 +355,12 @@ header {
         border-radius: 0 0 4rem 0;
         padding-right: 2rem;
         border-right: 5px solid var(--main-color);
+    }
+    :only-child{
+        border-radius: 0 0 4rem 4rem;
+        padding: 0.5rem 2rem;
+        border-right: 5px solid var(--main-color);
+        border-left: 5px solid var(--main-color);
     }
     a {
         text-decoration: none;
