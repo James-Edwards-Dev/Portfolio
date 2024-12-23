@@ -317,6 +317,22 @@ footer .contact{
     justify-content: center;
     align-items: center;
     img {
-        height: min(40vh, 40vw);
+        max-height: 25vh;
+        max-width: 25vw;
     }
+}
+#video_container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin-bottom: 0.5rem;
+    }
+}
+#project_video {
+    aspect-ratio: 16 / 9;
+    max-height: 60vh;
+    max-width: 96vw;
 }

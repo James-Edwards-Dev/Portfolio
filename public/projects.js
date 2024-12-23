@@ -23,7 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (project.Video) {
                     const project_video = document.getElementById('project_video');
-                    project_video.innerHTML = `<source src="videos/${project.Video}">`
+                    project_video.innerHTML = `<source src="videos/${project.Video}">`;
+
+                    // Add video title
+                    const h2 = document.createElement('h2');
+                    h2.innerHTML = `<h2>Check Out Some Gameplay!</h2>`;  
+
+                    const video_container = document.getElementById('video_container');   
+                    video_container.prepend(h2);              
                 }
             }
         }
