@@ -8,15 +8,16 @@
     <meta http-equiv="Expires" content="0">
     <script src="projects_index.js"></script>
     <title>James Edwards - Portfolio</title>
-    <script type="module" crossorigin src="/Portfolio/assets/main-vSIzQBBO.js"></script>
-    <link rel="stylesheet" crossorigin href="/Portfolio/assets/style-5F96lu5h.css">
+    <script type="module" crossorigin src="/Portfolio/assets/main-DOgrgo7K.js"></script>
+    <link rel="modulepreload" crossorigin href="/Portfolio/assets/email-D3zQwIeF.js">
+    <link rel="stylesheet" crossorigin href="/Portfolio/assets/email-DlukGX-r.css">
   </head>
   <body>
       <canvas id="bg"></canvas>
       <main>  
         <header>
-          <a href="#projects-nav">Projects</a>
           <a href="#education-nav">Education</a>
+          <a href="#projects-nav">Projects</a>
           <a href="#contact-nav">Contact</a>
         </header>
         <section id="hero">
@@ -167,21 +168,6 @@
             <p>"The code is re-used, minimising duplicate code. The code is organised and the build is flawless. Wrapping object functinality helps wih code flexibility and that is what you presented. The user interface is also interactive."</p>
           </div>
         </section>
-        <section class="contact-form">
-          <h2>Contact Me</h2>
-          <form id="contact-form-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email</label>
-            <input type="text" id="email" name="name" required>
-
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="5" required></textarea>
-
-            <button type="submit" id="submit-contact">Send Email</button>
-          </form>
-        </section>
         <footer>
           <div class="contact" id="contact-nav">
             <h3>Contact Me:</h3>
@@ -189,6 +175,27 @@
             <a href="https://www.linkedin.com/in/james-edwards-b5a7ba295/"><img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"></a>
             <a href="mailto:jamesedwards04@gmail.com">jamesedwards04@gmail.com</a>
           </div>
+          <div id="main-area">
+            <div class="contact-form">
+              <h3>Contact Form</h3>
+              <form id="contact-form-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="name" required>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" required></textarea>
+                <button type="submit" id="submit-contact">Send Email</button>
+              </form>
+            </div>
+            <div id="footer-projects">
+              <h3>Projects</h3>
+              <ul>               
+                <li><a href="">Project 1</a></li>
+                <li><a href="">Project 2</a></li>
+              </ul>
+            </div>
+          </div>
         </footer>
       </main>
   </body>
