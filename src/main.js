@@ -34,10 +34,10 @@ scene.background = background_color;
 // Geometry
 let me = null;
 const material = new THREE.MeshStandardMaterial({color: 0xffa500});
-load_gltf_new_material('me/me.gltf', material)
+load_gltf('me/me.gltf')
     .then((mesh) => {
         me = mesh;
-        me.scale.set(8, 8, 8);
+        me.scale.set(3, 3, 3);
 
         update_me_pos();
     })
@@ -79,7 +79,7 @@ function update_me_pos() {
 
     me.position.copy(worldPosition);
 
-    me.position.y -= 20;
+    me.position.y -= 10;
 }
 
 function main_loop() {
