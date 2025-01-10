@@ -309,6 +309,9 @@ footer {
     padding: 1.5rem 5vw;
     min-height: 50vh;
     border-top: black solid 5px;
+    a {
+        color: var(--inverse-text-color);
+    }
 }
 
 footer .contact{
