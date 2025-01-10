@@ -19,7 +19,7 @@ canvas {
 
 html {
     color: var(--text-color);
-    font-family: Helvetica,Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -279,6 +279,23 @@ section{
 form label, form input, form textarea{
     display: block;
     width: 100%;
+}
+form input, form textarea, form button{
+    background-color: var(--darkerprimary-color);
+    font-family: Helvetica, Arial, sans-serif;;
+    border: solid 2px black;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    font-size: 0.9rem;
+}
+
+form button {
+    background-color: var(--highlight-color);
+}
+form button:hover, 
+form button:focus{
+    background-color: var(--main-color);
+    color: var(--highlight-color);
 }
 
 form textarea {
