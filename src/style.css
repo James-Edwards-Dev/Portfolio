@@ -480,8 +480,8 @@ header a:hover {
     #hero {
         background-color: var(--highlight-color);
         > div {
-        width: 100%;
-        max-width: none;
+            width: 100%;
+            max-width: none;
         }
     }
 }
