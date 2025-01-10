@@ -466,12 +466,22 @@ header a:hover {
     }
 }
 
-@media screen and (max-width: 563px) {
+@media screen and (max-width: 575px) {
     .big-ver {
         display: none;
     }
     .small-ver {
         display: inline;
         a {color: var(--inverse-text-color)}
+    }
+}
+
+@media screen and (max-width: 405px){
+    #hero {
+        background-color: var(--highlight-color);
+        > div {
+        width: 100%;
+        max-width: none;
+        }
     }
 }
