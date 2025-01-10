@@ -62,8 +62,8 @@ section{
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+    width: min(max(5vw, 30px), 50px) !important;
+    height: min(max(5vw, 30px), 50px) !important;
 }
 #hero{
     color: var(--inverse-text-color);
@@ -138,11 +138,11 @@ section{
     margin-top: 0;
     padding-top: 2rem;
     article {
-        flex-grow: 1.5;
+        flex: 2.5;
     }
 
     aside {
-        flex-grow: 1;
+        flex: 1;
         max-width: 350px;
         padding: 15px;
         background-color: var(--main-color);
@@ -409,4 +409,31 @@ header {
 header a:hover {
     background-color: var(--primary-color);
     color: var(--inverse-text-color);
+}
+
+
+@media screen and (max-width: 1000px) {
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects_skills aside{
+        flex-grow: 1.5;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .projects_skills aside{
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .projects_skills{
+        flex-direction: column;   
+        aside {
+            max-width: none;
+        }  
+    }
 }
