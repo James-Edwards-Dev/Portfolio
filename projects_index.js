@@ -38,7 +38,7 @@ function displayProjects(projects){
         if (project.Itch) {
             const itchLink = document.createElement('a');
             itchLink.href = project.Itch;
-            itchLink.innerHTML = `<img class="itch" src="images/Itch Io.png">`
+            itchLink.innerHTML = `<img class="icon itch" src="images/Itch Io.png">`
             
             const buttonLink = linksDiv.querySelector('.button');
             linksDiv.insertBefore(itchLink, buttonLink);
