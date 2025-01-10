@@ -65,6 +65,10 @@ section{
     width: min(max(5vw, 30px), 50px) !important;
     height: min(max(5vw, 30px), 50px) !important;
 }
+
+.small-ver{
+    display: none;
+}
 #hero{
     color: var(--inverse-text-color);
     margin: 0;
@@ -459,5 +463,15 @@ header a:hover {
         a > div {
             display: none;
         }
+    }
+}
+
+@media screen and (max-width: 563px) {
+    .big-ver {
+        display: none;
+    }
+    .small-ver {
+        display: inline;
+        a {color: var(--inverse-text-color)}
     }
 }
