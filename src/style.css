@@ -332,6 +332,9 @@ footer #main-area {
     gap: 2rem;
     padding: 0.5rem;
     .contact-form{
+        flex-grow: 3;
+    }
+    > * {
         flex-grow: 1;
     }
     h3{
