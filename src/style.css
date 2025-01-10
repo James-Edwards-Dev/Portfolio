@@ -427,6 +427,15 @@ header a:hover {
     .projects_skills aside{
         flex-grow: 1;
     }
+    .contact_list{
+        gap: 5px;
+        
+        a {
+            padding: 3px;
+            border-width: 4px;
+            gap: 3px;
+        }
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -435,5 +444,20 @@ header a:hover {
         aside {
             max-width: none;
         }  
+    }
+
+    .contact_list {
+        a:has(span){
+            background-color: transparent;
+            border: 0px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        span {
+            display: none;
+        }
+        a > div {
+            display: none;
+        }
     }
 }
