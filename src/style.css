@@ -560,6 +560,9 @@ header a:hover {
         display: inline;
         a {color: var(--inverse-text-color)}
     }
+    .main-education {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 405px){
