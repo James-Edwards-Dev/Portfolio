@@ -319,6 +319,10 @@ section{
             flex-wrap: wrap;
             align-items: flex-end;
         }
+        h4 {
+            margin: 0;
+        }
+        p{margin-top: 0;}
     }
     .images{
         display: flex;
