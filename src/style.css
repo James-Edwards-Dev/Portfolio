@@ -580,12 +580,6 @@ header a:hover {
     footer #main-area  {
         flex-direction: column;
     }
-    .feedback {
-        grid-template-columns: 1fr !important;
-        p:last-child {
-            grid-column: span 1 !important;
-        }
-    }
 }
 
 @media screen and (max-width: 405px){
@@ -594,6 +588,12 @@ header a:hover {
         > div {
             width: 100%;
             max-width: none;
+        }
+    }
+    .feedback {
+        grid-template-columns: 1fr !important;
+        p:last-child {
+            grid-column: span 1 !important;
         }
     }
 }
