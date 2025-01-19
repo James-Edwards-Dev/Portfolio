@@ -48,6 +48,7 @@ h3{
     font-size: 1.25rem;
 }
 h4 {
+    margin-top: 1rem;
     margin-bottom: 0;
     font-size: 1.25rem;
 }
@@ -292,17 +293,30 @@ section{
     display: flex;
     gap: 2rem;
 
+    > a {
+        font-size: 0;
+    }
     > a img {
-        border: solid black 5px;
         background-color: white;
         padding: 10px;
+        max-width: 25vw;
     }
     > div{ 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         img {
-            height: 7rem;
+            object-fit: contain;
+            height: min(7rem, 10vw);
+            
+        }
+        a {
+            max-width: 50%;
+        }
+        a:has(span){
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
         }
     }
     .images{
