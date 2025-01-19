@@ -393,7 +393,6 @@ footer .contact{
     padding-bottom: 1.5rem;
     h3{
         margin: 0;
-        margin-left: 0.5rem;
     }
     a {
         color: black;
@@ -403,7 +402,8 @@ footer .contact{
 footer #main-area {
     display: flex;
     gap: 2rem;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
+    padding-right: 0.75rem;
     .contact-form{
         flex-grow: 3;
     }
