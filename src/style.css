@@ -563,6 +563,9 @@ header a:hover {
     .main-education {
         display: block;
     }
+    footer #main-area  {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 405px){
