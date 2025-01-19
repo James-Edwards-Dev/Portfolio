@@ -21,7 +21,7 @@ function displayProjects(projects){
         const projectLink = `project.html?project=${encodedProjectName}`; // Create link with query parameter
 
         div.innerHTML = `
-            <div>
+            <div class="project-details">
                 <h3>${project.Name}</h3>
                 <a href="${projectLink}"><img src="images/${project.Image}"></a>
                 <p>${project.Description}</p>
