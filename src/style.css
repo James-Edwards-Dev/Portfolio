@@ -49,7 +49,7 @@ h3{
 }
 h4 {
     margin-top: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     font-size: 1.25rem;
 }
 
@@ -328,9 +328,11 @@ section{
 }
 .education .feedback{
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
     gap: 10px;
     p {
+        margin: 0;
         background-color: var(--highlight-color);
         padding: 20px;
         padding-bottom: 40px;
@@ -514,17 +516,23 @@ header a:hover {
         font-size: 1.5rem;
     }
     h2 {
-        margin-top: 0;
         font-size: 1.25rem;
     }
     h3{
-        margin-top: 0;
         font-size: 1.125rem;
     }
     h4 {
-        margin-top: 1rem;
-        margin-bottom: 0;
         font-size: 1.125rem;
+    }
+
+    .feedback {
+        grid-template-columns: repeat(2, 1fr) !important;
+        p {
+            padding: 15px !important;
+        }
+        p:last-child {
+            grid-column: span 2;
+        }
     }
 }
 
@@ -565,6 +573,12 @@ header a:hover {
     }
     footer #main-area  {
         flex-direction: column;
+    }
+    .feedback {
+        grid-template-columns: 1fr !important;
+        p:last-child {
+            grid-column: span 1 !important;
+        }
     }
 }
 
