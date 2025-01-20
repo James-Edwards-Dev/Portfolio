@@ -40,7 +40,7 @@ function displayProjects(projects){
             const buttonLink = linksDiv.querySelector('.button');
             linksDiv.insertBefore(gitLink, buttonLink);
         }
-        // Itch.oo Link
+        // Itch.io Link
         if (project.Itch) {
             const itchLink = document.createElement('a');
             itchLink.href = project.Itch;
