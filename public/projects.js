@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
 
                 const project_img = document.getElementById('project_image');
-                project_img.src = "images/"+ project.Image;
+                if (!project.img_placeholder) {
+                    project_img.src = "images/" + project.Image;
+                }
 
                 if (project.Video) {
                     const project_video = document.getElementById('project_video');

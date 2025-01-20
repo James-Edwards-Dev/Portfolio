@@ -18,6 +18,7 @@
         "Name": "Final Year Project",
         "Description": "A Skiing game that uses Procedural Content Generation to create levels",
         "Image": "snow_mountins.jpg",
-        "Unfinished": "True"
+        "Unfinished": "True",
+        "img_placeholder": "True"
     }
 ]
