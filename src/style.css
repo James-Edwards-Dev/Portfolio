@@ -497,10 +497,8 @@ header a:hover {
 #project_details{
     background-color: var(--background-color);
     border-top: 2px solid var(--main-color);
-    padding: 2rem 5vw;
+    padding: 2rem 18vw;
     margin-top: 2rem;
-    /*width: max(fit-content, 50vw);
-    margin: max(auto, 5rem);*/
 }
 
 @media screen and (max-width: 1300px) {
