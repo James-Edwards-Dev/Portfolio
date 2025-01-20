@@ -196,8 +196,33 @@ section{
     }
 }
 
-#projectList .Unfinished .project-details img{
-    filter: blur(3.5px);
+#projectList .Unfinished .project-details div {
+    display: grid;
+    img{
+        filter: blur(3.5px);
+    }
+    a, > div {
+        grid-area: 1 / 1;
+    }
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    > div > div {
+        width: fit-content;
+        height: fit-content;
+        padding: 1rem 1.5rem;
+        background-color: var(--main-color);
+        z-index: 1;
+        pointer-events: none;
+        border-radius: 5px;
+    }
+    h4 {
+        font-size: 1rem;
+        margin: 0;
+        pointer-events: none;
+    }
 }
 
 .links .button:hover {

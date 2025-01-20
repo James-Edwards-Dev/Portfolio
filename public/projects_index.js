@@ -23,7 +23,7 @@ function displayProjects(projects){
         div.innerHTML = `
             <div class="project-details">
                 <h3>${project.Name}</h3>
-                <a href="${projectLink}"><img src="images/${project.Image}"></a>
+                <div class="img-container"><a href="${projectLink}"><img src="images/${project.Image}"></a></div>
                 <p>${project.Description}</p>
             </div>
             <div class="links">
@@ -53,6 +53,12 @@ function displayProjects(projects){
         // Unfished Project 
         if (project.Unfinished){
             div.classList.add("Unfinished");
+
+            const uf_div = document.createElement('div');
+            uf_div.innerHTML = `<div><h4>In Progress</h4></div>`;
+
+            const a_tag = div.querySelector(".project-details").querySelector(".img-container");
+            a_tag.append(uf_div);
         }
         projectsList.appendChild(div);
     });
