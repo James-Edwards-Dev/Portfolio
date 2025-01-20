@@ -196,6 +196,10 @@ section{
     }
 }
 
+#projectList .Unfinished .project-details img{
+    filter: blur(3.5px);
+}
+
 .links .button:hover {
     background-color: var(--background-color) !important;
     color: var(--highlight-color) !important;

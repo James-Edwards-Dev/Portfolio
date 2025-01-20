@@ -50,6 +50,10 @@ function displayProjects(projects){
             linksDiv.insertBefore(itchLink, buttonLink);
         }
 
+        // Unfished Project 
+        if (project.Unfinished){
+            div.classList.add("Unfinished");
+        }
         projectsList.appendChild(div);
     });
 }
