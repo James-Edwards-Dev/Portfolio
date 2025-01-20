@@ -30,7 +30,7 @@ function displayProjects(projects){
                 <a href="${projectLink}" class="button"><div>Project Details</div></a>
             </div>
         `;
-
+        // Github Link
         linksDiv = div.querySelector('.links');
         if (project.Git) {
             const gitLink = document.createElement('a');
@@ -40,7 +40,7 @@ function displayProjects(projects){
             const buttonLink = linksDiv.querySelector('.button');
             linksDiv.insertBefore(gitLink, buttonLink);
         }
-
+        // Itch.oo Link
         if (project.Itch) {
             const itchLink = document.createElement('a');
             itchLink.href = project.Itch;
