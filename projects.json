@@ -13,5 +13,11 @@
         "Image": "music_battle.PNG",
         "Git": "",
         "Itch": "#"
+    },
+    {
+        "Name": "Final Year Project",
+        "Description": "A Skiing game that uses Procedural Content Generation to create levels",
+        "Image": "snow_mountins.jpg",
+        "Unfinished": "True"
     }
 ]
