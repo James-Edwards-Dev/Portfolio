@@ -494,6 +494,14 @@ header a:hover {
     background-color: #ffffff9a;
     color: var(--inverse-text-color);
 }
+#project_details{
+    background-color: var(--background-color);
+    border-top: 2px solid var(--main-color);
+    padding: 2rem 5vw;
+    margin-top: 2rem;
+    /*width: max(fit-content, 50vw);
+    margin: max(auto, 5rem);*/
+}
 
 @media screen and (max-width: 1300px) {
     #projectList {
