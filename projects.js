@@ -23,10 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
 
                 const project_img = document.getElementById('project_image');
-                project_img.src = "images/"+ project.Image;
+                if (!project.img_placeholder) {
+                    project_img.src = "images/" + project.Image;
+                }
 
+                const project_video = document.getElementById('project_video');
                 if (project.Video) {
-                    const project_video = document.getElementById('project_video');
                     project_video.innerHTML = `<source src="videos/${project.Video}">`;
 
                     // Add video title
@@ -35,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const video_container = document.getElementById('video_container');   
                     video_container.prepend(h2);              
+                } else {
+                    project_video.remove()
                 }
 
                 if (project.Page){
