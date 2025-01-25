@@ -188,7 +188,7 @@ section{
     .button{
         margin-left: auto;
         border-radius: 15px;
-        padding: 0.5rem;
+        padding: 1rem 0.5rem;
         display: flex;
         align-items: center;
         color: var(--inverse-text-color);
