@@ -9,8 +9,11 @@ import { GLTFLoader } from 'three/examples/jsm/Addons.js';
 // Set up scene
 const scene = new THREE.Scene();
 
+// Calculate svh 
+const svh = Math.min(window.innerHeight, window.visualViewport.height);
+
 // Initalize Camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.visualViewport.height, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / svh, 0.1, 1000);
 camera.position.setZ(30);
 
 // Initalize renderer
@@ -20,7 +23,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.visualViewport.height)
+renderer.setSize(window.innerWidth, svh)
 
 
 // Skybox
@@ -62,10 +65,10 @@ const gridHelper = new THREE.GridHelper(200, 50);
 //const controls = new OrbitControls(camera, renderer.domElement);
 
 window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.visualViewport.height;
+    camera.aspect = window.innerWidth / svh;
     camera.updateProjectionMatrix();
 
-    renderer.setSize(window.innerWidth, window.visualViewport.height);
+    renderer.setSize(window.innerWidth, svh);
 
     //update_me_pos();
 });
