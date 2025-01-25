@@ -15,6 +15,12 @@
         "Page": "Prototype_Runner.html"
     },
     {
+        "Name": "My Portfolio Website",
+        "Description": "The website you are currently on",
+        "Image": "Portfolio.png",
+        "Git": "https://github.com/James-Edwards-Dev/Portfolio"
+    },
+    {
         "Name": "Music Battle",
         "Description": "Simple fighting game made in unity",
         "Image": "music_battle.PNG",
