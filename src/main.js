@@ -62,10 +62,10 @@ const gridHelper = new THREE.GridHelper(200, 50);
 //const controls = new OrbitControls(camera, renderer.domElement);
 
 window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = window.innerWidth / window.visualViewport.height;
     camera.updateProjectionMatrix();
 
-    renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.setSize(window.innerWidth, window.visualViewport.height);
 
     //update_me_pos();
 });
