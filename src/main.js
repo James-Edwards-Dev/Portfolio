@@ -10,7 +10,7 @@ import { GLTFLoader } from 'three/examples/jsm/Addons.js';
 const scene = new THREE.Scene();
 
 // Initalize Camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.visualViewport.height, 0.1, 1000);
 camera.position.setZ(30);
 
 // Initalize renderer
@@ -20,7 +20,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.setSize(window.innerWidth, window.visualViewport.height)
 
 
 // Skybox
