@@ -19,7 +19,8 @@
         "Name": "My Portfolio Website",
         "Description": "The website you are currently on. (Made using HTML, CSS, Javascript and Three.js)",
         "Image": "Portfolio.png",
-        "Git": "https://github.com/James-Edwards-Dev/Portfolio"
+        "Git": "https://github.com/James-Edwards-Dev/Portfolio",
+        "Page": "Portfolio.html"
     },
     {
         "Name": "Music Battle",
