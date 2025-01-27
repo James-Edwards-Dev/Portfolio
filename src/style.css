@@ -471,9 +471,8 @@ footer #main-area {
     }
 }
 #project_video {
-    aspect-ratio: 16 / 9;
-    max-height: 60vh;
-    max-width: 96vw;
+    max-height: 50vh;
+    max-width: 80vw;
 }
 
 header {
@@ -505,8 +504,11 @@ header a:hover {
     h1, h2, h3, h4{
         margin: 1.25rem 1rem 0 0;
     }
-    video {
+    video, img {
+        display: block;
         max-width: 100%;
+        max-height: 40vh;
+        margin: 0 auto;
     }
 }
 
