@@ -505,6 +505,9 @@ header a:hover {
     h1, h2, h3, h4{
         margin: 1.25rem 1rem 0 0;
     }
+    video {
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 1300px) {
