@@ -499,6 +499,12 @@ header a:hover {
     border-top: 2px solid var(--main-color);
     padding: 2rem 18vw;
     margin-top: 2rem;
+    p {
+        margin: 0.75rem 0;
+    }
+    h1, h2, h3, h4{
+        margin: 1.25rem 1rem 0 0;
+    }
 }
 
 @media screen and (max-width: 1300px) {
