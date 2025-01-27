@@ -65,6 +65,7 @@ const gridHelper = new THREE.GridHelper(200, 50);
 //const controls = new OrbitControls(camera, renderer.domElement);
 
 window.addEventListener('resize', () => {
+    const svh = Math.min(window.innerHeight, window.visualViewport.height);
     camera.aspect = window.innerWidth / svh;
     camera.updateProjectionMatrix();
 
