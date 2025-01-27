@@ -3,6 +3,7 @@
         "Name": "Final Year Project",
         "Description": "A Skiing game created in Unreal Engine Using C++ that uses Procedural Content Generation to create levels",
         "Image": "snow_mountins.jpg",
+        "Page": "Final_Year_Project.html",
         "Unfinished": "True",
         "img_placeholder": "True"
     },
@@ -18,12 +19,14 @@
         "Name": "My Portfolio Website",
         "Description": "The website you are currently on. (Made using HTML, CSS, Javascript and Three.js)",
         "Image": "Portfolio.png",
-        "Git": "https://github.com/James-Edwards-Dev/Portfolio"
+        "Git": "https://github.com/James-Edwards-Dev/Portfolio",
+        "Page": "Portfolio.html"
     },
     {
         "Name": "Music Battle",
         "Description": "Simple fighting game made in unity with C#",
         "Image": "music_battle.PNG",
+        "Page": "Music_Battle.html",
         "Git": "#",
         "Itch": "#"
     }
