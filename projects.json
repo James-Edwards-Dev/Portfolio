@@ -27,7 +27,6 @@
         "Description": "Simple fighting game made in unity with C#",
         "Image": "music_battle.PNG",
         "Page": "Music_Battle.html",
-        "Git": "#",
-        "Itch": "#"
+        "Git": "https://github.com/James-Edwards-Dev/Music_Battle"
     }
 ]
