@@ -28,18 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 const project_video = document.getElementById('project_video');
-                if (project.Video) {
-                    project_video.innerHTML = `<source src="videos/${project.Video}">`;
+                // if (project.Video) {
+                //     project_video.innerHTML = `<source src="videos/${project.Video}">`;
 
-                    // Add video title
-                    const h2 = document.createElement('h2');
-                    h2.innerHTML = `<h2>Check Out Some Gameplay!</h2>`;  
+                //     // Add video title
+                //     const h2 = document.createElement('h2');
+                //     h2.innerHTML = `<h2>Check Out Some Gameplay!</h2>`;  
 
-                    const video_container = document.getElementById('video_container');   
-                    video_container.prepend(h2);              
-                } else {
-                    project_video.remove()
-                }
+                //     const video_container = document.getElementById('video_container');   
+                //     video_container.prepend(h2);              
+                // } else {
+                //     project_video.remove()
+                // }
+                project_video.remove() // Temp
 
                 if (project.Page){
                     project_details = document.getElementById('project_details');
