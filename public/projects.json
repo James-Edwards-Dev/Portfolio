@@ -5,7 +5,8 @@
         "Image": "snow_mountins.jpg",
         "Page": "Final_Year_Project.html",
         "Unfinished": "True",
-        "img_placeholder": "True"
+        "img_placeholder": "True",
+        "Git": "https://github.com/James-Edwards-Dev/Procedural_Skier"
     },
     {
         "Name": "Prototype Runner",
