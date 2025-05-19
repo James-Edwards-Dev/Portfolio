@@ -2,10 +2,8 @@
     {
         "Name": "Final Year Project",
         "Description": "A Skiing game created in Unreal Engine Using C++ that uses Procedural Content Generation to create levels",
-        "Image": "snow_mountins.jpg",
+        "Image": "Skier_Render_1.png",
         "Page": "Final_Year_Project.html",
-        "Unfinished": "True",
-        "img_placeholder": "True",
         "Git": "https://github.com/James-Edwards-Dev/Procedural_Skier"
     },
     {
