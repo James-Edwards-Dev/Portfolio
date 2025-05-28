@@ -1,10 +1,17 @@
 [
     {
         "Name": "Final Year Project",
-        "Description": "A Skiing game created in Unreal Engine Using C++ that uses Procedural Content Generation to create levels",
+        "Description": "A Skiing game created in Unreal Engine Using C++ that uses Procedural Content Generation to create levels.",
         "Image": "Skier_Render_1.png",
         "Page": "Final_Year_Project.html",
         "Git": "https://github.com/James-Edwards-Dev/Procedural_Skier"
+    },
+    {
+        "Name": "IN4 Session Sandbox",
+        "Description": "This project was developed during IN4 groups Skills City Unreal Engine Developer Bootcamp & shows that I created in this time.",
+        "Image": "in4group_logo.jpg",
+        "Git": "https://github.com/James-Edwards-Dev/IN4SessionSandbox",
+        "Page": "IN4Sandbox.html"
     },
     {
         "Name": "Prototype Runner",
@@ -23,7 +30,7 @@
     },
     {
         "Name": "Music Battle",
-        "Description": "Simple fighting game made in unity with C#",
+        "Description": "Simple fighting game made in unity with C#.",
         "Image": "music_battle.PNG",
         "Page": "Music_Battle.html",
         "Git": "https://github.com/James-Edwards-Dev/Music_Battle"
